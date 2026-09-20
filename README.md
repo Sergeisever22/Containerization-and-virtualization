@@ -59,10 +59,8 @@ additional/
 
 ### Скриншот 1 — структура проекта
 
-> **Добавить сюда скриншот папки `additional` со всеми созданными файлами и каталогами.**
-
 ```md
-![Структура проекта](images/01-project-structure.png)
+![Структура проекта](images/pack.jpg)
 ```
 
 ---
@@ -105,10 +103,9 @@ DocumentRoot "/var/www/html"
 
 ### Скриншот 2 — настройка Apache
 
-> **Добавить сюда скриншот файла `httpd.conf` с настройками PHP-FPM и `DocumentRoot`.**
 
 ```md
-![Настройка Apache](images/02-httpd-config.png)
+![Настройка Apache](images/photo1.jpg)
 ```
 
 ---
@@ -147,18 +144,16 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 
 ### Скриншот 3 — ошибка при первоначальной сборке PHP-FPM
 
-> **Добавить сюда скриншот PowerShell с ошибкой `404 Not Found`.**
 
 ```md
-![Ошибка PHP-FPM](images/03-php-fpm-error.png)
+![Ошибка PHP-FPM](images/power7.jpg)
 ```
 
 ### Скриншот 4 — успешная сборка PHP-FPM
 
-> **Добавить сюда скриншот успешной сборки контейнера PHP-FPM.**
 
 ```md
-![Успешная сборка PHP-FPM](images/04-php-fpm-build.png)
+![Успешная сборка PHP-FPM](images/photo2.jpg)
 ```
 
 ---
@@ -218,10 +213,8 @@ CMD [ "cron", "-f" ]
 
 ### Скриншот 5 — Cron-скрипты
 
-> **Добавить сюда скриншот папки `files/cron/scripts` или открытых Shell-скриптов.**
-
 ```md
-![Cron scripts](images/05-cron-scripts.png)
+![Cron scripts](images/photo3.jpg)
 ```
 
 ---
@@ -255,10 +248,11 @@ ports:
 
 ### Скриншот 6 — файл Docker Compose
 
-> **Добавить сюда скриншот файла `docker-compose.yml`.**
+
 
 ```md
-![Docker Compose](images/06-docker-compose.png)
+![Docker Compose](images/photo4_1.jpg)
+![Docker Compose](images/photo4_2.jpg)
 ```
 
 ---
@@ -285,10 +279,9 @@ docker-compose build --no-cache php-fpm
 
 ### Скриншот 7 — сборка контейнеров
 
-> **Добавить сюда скриншот PowerShell во время или после успешной сборки Docker-образов.**
 
 ```md
-![Сборка Docker-образов](images/07-docker-build.png)
+![Сборка Docker-образов](images/photo5.jpg)
 ```
 
 ---
@@ -330,10 +323,9 @@ additional-cron-1
 
 ### Скриншот 8 — команда `docker ps`
 
-> **Добавить сюда скриншот, на котором видно четыре работающих контейнера.**
 
 ```md
-![Работающие контейнеры](images/08-docker-ps.png)
+![Работающие контейнеры](images/power9.jpg)
 ```
 
 ---
@@ -360,30 +352,28 @@ http://wordpress.localhost
 
 ### Скриншот 9 — подключение WordPress к базе данных
 
-> **Добавить сюда скриншот формы WordPress с параметрами подключения к MariaDB.**
 
 ```md
-![Подключение WordPress к MariaDB](images/09-wordpress-db.png)
+![Подключение WordPress к MariaDB](images/host1.jpg)
 ```
 
 После этого была выполнена стандартная установка WordPress.
 
 ### Скриншот 10 — форма установки WordPress
 
-> **Добавить сюда скриншот страницы `Welcome / Information needed`.**
 
 ```md
-![Установка WordPress](images/10-wordpress-install.png)
+![Установка WordPress](images/host2.jpg)
+![Установка WordPress](images/host3.jpg)
 ```
 
 После завершения установки главная страница WordPress успешно открылась.
 
 ### Скриншот 11 — работающий WordPress
 
-> **Добавить сюда скриншот главной страницы сайта `Docker WordPress`.**
 
 ```md
-![Работающий WordPress](images/11-wordpress-site.png)
+![Работающий WordPress](images/host4.jpg)
 ```
 
 ---
@@ -409,10 +399,9 @@ alive Severcenco Serghei
 
 ### Скриншот 12 — логи Cron
 
-> **Добавить сюда скриншот PowerShell, где видны строки `alive`, `sql dump created`, `site backup done` и `remove old backups`.**
 
 ```md
-![Логи Cron](images/12-cron-logs.png)
+![Логи Cron](images/power8.jpg)
 ```
 
 ---
@@ -435,18 +424,15 @@ backups/site/
 
 ### Скриншот 13 — резервная копия базы данных
 
-> **Добавить сюда скриншот папки `backups/mysql`, где виден созданный `.sql.gz` файл.**
-
 ```md
-![Резервная копия MariaDB](images/13-mysql-backup.png)
+![Резервная копия MariaDB](images/photo6.jpg)
 ```
 
 ### Скриншот 14 — резервная копия сайта
 
-> **Добавить сюда скриншот папки `backups/site`, где виден созданный `.tar.gz` архив.**
 
 ```md
-![Резервная копия сайта](images/14-site-backup.png)
+![Резервная копия сайта](images/photo7.jpg)
 ```
 
 ---
@@ -618,35 +604,3 @@ http://wordpress.localhost
 - автоматического удаления старых резервных копий.
 
 Работа всех контейнеров и Cron-заданий была успешно проверена.
-
----
-
-## Рекомендуемая структура папки со скриншотами
-
-Для удобства можно создать рядом с `README.md` папку:
-
-```text
-images/
-```
-
-и хранить скриншоты с такими именами:
-
-```text
-images/
-├── 01-project-structure.png
-├── 02-httpd-config.png
-├── 03-php-fpm-error.png
-├── 04-php-fpm-build.png
-├── 05-cron-scripts.png
-├── 06-docker-compose.png
-├── 07-docker-build.png
-├── 08-docker-ps.png
-├── 09-wordpress-db.png
-├── 10-wordpress-install.png
-├── 11-wordpress-site.png
-├── 12-cron-logs.png
-├── 13-mysql-backup.png
-└── 14-site-backup.png
-```
-
-После добавления изображений GitHub или другой Markdown-просмотрщик автоматически покажет их в соответствующих местах отчёта.

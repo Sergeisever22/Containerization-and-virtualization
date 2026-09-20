@@ -59,9 +59,9 @@ additional/
 
 ### Скриншот 1 — структура проекта
 
-```md
+
 ![Структура проекта](images/pack.jpg)
-```
+
 
 ---
 
@@ -104,9 +104,9 @@ DocumentRoot "/var/www/html"
 ### Скриншот 2 — настройка Apache
 
 
-```md
+
 ![Настройка Apache](images/photo1.jpg)
-```
+
 
 ---
 
@@ -145,16 +145,16 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 ### Скриншот 3 — ошибка при первоначальной сборке PHP-FPM
 
 
-```md
+
 ![Ошибка PHP-FPM](images/power7.jpg)
-```
+
 
 ### Скриншот 4 — успешная сборка PHP-FPM
 
 
-```md
+
 ![Успешная сборка PHP-FPM](images/photo2.jpg)
-```
+
 
 ---
 
@@ -213,9 +213,9 @@ CMD [ "cron", "-f" ]
 
 ### Скриншот 5 — Cron-скрипты
 
-```md
+
 ![Cron scripts](images/photo3.jpg)
-```
+
 
 ---
 
@@ -250,10 +250,9 @@ ports:
 
 
 
-```md
+
 ![Docker Compose](images/photo4_1.jpg)
 ![Docker Compose](images/photo4_2.jpg)
-```
 
 ---
 
@@ -279,10 +278,7 @@ docker-compose build --no-cache php-fpm
 
 ### Скриншот 7 — сборка контейнеров
 
-
-```md
 ![Сборка Docker-образов](images/photo5.jpg)
-```
 
 ---
 
@@ -324,9 +320,7 @@ additional-cron-1
 ### Скриншот 8 — команда `docker ps`
 
 
-```md
 ![Работающие контейнеры](images/power9.jpg)
-```
 
 ---
 
@@ -352,20 +346,15 @@ http://wordpress.localhost
 
 ### Скриншот 9 — подключение WordPress к базе данных
 
-
-```md
 ![Подключение WordPress к MariaDB](images/host1.jpg)
-```
 
 После этого была выполнена стандартная установка WordPress.
 
 ### Скриншот 10 — форма установки WordPress
 
 
-```md
 ![Установка WordPress](images/host2.jpg)
 ![Установка WordPress](images/host3.jpg)
-```
 
 После завершения установки главная страница WordPress успешно открылась.
 
@@ -399,10 +388,8 @@ alive Severcenco Serghei
 
 ### Скриншот 12 — логи Cron
 
-
-```md
 ![Логи Cron](images/power8.jpg)
-```
+
 
 ---
 
@@ -424,16 +411,12 @@ backups/site/
 
 ### Скриншот 13 — резервная копия базы данных
 
-```md
+
 ![Резервная копия MariaDB](images/photo6.jpg)
-```
 
 ### Скриншот 14 — резервная копия сайта
 
-
-```md
 ![Резервная копия сайта](images/photo7.jpg)
-```
 
 ---
 

@@ -360,10 +360,7 @@ http://wordpress.localhost
 
 ### Скриншот 11 — работающий WordPress
 
-
-```md
 ![Работающий WordPress](images/host4.jpg)
-```
 
 ---
 

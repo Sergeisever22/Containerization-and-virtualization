@@ -1,0 +1,11 @@
+FROM debian:latest
+
+RUN apt update && apt -y upgrade && apt install -y cron mariadb-client
+
+COPY ./files/cron/crontab /etc/cron.d/crontab
+COPY ./files/cron/scripts/ /scripts/
+
+RUN crontab /etc/cron.d/crontab
+
+ENTRYPOINT [ "/scripts/environment.sh" ]
+CMD [ "cron", "-f" ]

@@ -1,0 +1,16 @@
+FROM php:7.4-fpm
+
+# Исправление устаревших репозиториев Debian Bullseye
+RUN sed -i '/bullseye-security/d' /etc/apt/sources.list \
+    && sed -i '/bullseye-updates/d' /etc/apt/sources.list \
+    && sed -i 's/deb.debian.org\/debian/archive.debian.org\/debian/g' /etc/apt/sources.list \
+    && echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev
+
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-configure pdo_mysql \
+    && docker-php-ext-install -j$(nproc) gd mysqli

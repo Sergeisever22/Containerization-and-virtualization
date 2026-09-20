@@ -1,0 +1,55 @@
+version: '3.9'
+
+services:
+
+  httpd:
+    build:
+      context: ./
+      dockerfile: Dockerfile.httpd
+    networks:
+      - internal
+    ports:
+      - "80:80"
+    volumes:
+      - "./site/wordpress/:/var/www/html/"
+
+  php-fpm:
+    build:
+      context: ./
+      dockerfile: Dockerfile.php-fpm
+    networks:
+      - internal
+    volumes:
+      - "./site/wordpress/:/var/www/html/"
+
+  mariadb:
+    build:
+      context: ./
+      dockerfile: Dockerfile.mariadb
+    networks:
+      - internal
+    environment:
+      MARIADB_DATABASE: sample
+      MARIADB_USER: sampleuser
+      MARIADB_PASSWORD: samplepassword
+      MARIADB_ROOT_PASSWORD: rootpassword
+    volumes:
+      - "./database/:/var/lib/mysql/"
+
+  cron:
+    build:
+      context: ./
+      dockerfile: Dockerfile.cron
+    environment:
+      USERNAME: Severcenco Serghei
+      MARIADB_DATABASE: sample
+      MARIADB_USER: sampleuser
+      MARIADB_PASSWORD: samplepassword
+    volumes:
+      - "./backups/:/var/backups/"
+      - "./site/wordpress/:/var/www/html/"
+    networks:
+      - internal
+
+networks:
+  internal: {}

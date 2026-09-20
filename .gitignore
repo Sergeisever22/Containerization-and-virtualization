@@ -1,0 +1,15 @@
+# MariaDB runtime data
+database/
+
+# Generated backups
+backups/
+
+# WordPress configuration with database credentials
+site/wordpress/wp-config.php
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+desktop.ini
